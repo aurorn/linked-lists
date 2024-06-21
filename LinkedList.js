@@ -100,5 +100,16 @@ export default class LinkedList {
         }
         return null;
     }
+
+    toString() {
+        let current = this.headNode;
+        let result = '';
+        while (current) {
+          result += `( ${current.value} ) -> `;
+          current = current.nextNode;
+        }
+        result += 'null';
+        return result;
+    }
       
 }
