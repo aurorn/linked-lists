@@ -76,5 +76,16 @@ export default class LinkedList {
         this.length--;
         return poppedNode;
     }
+
+    contains(value) {
+        let current = this.headNode;
+        while (current) {
+          if (current.value === value) {
+            return true;
+          }
+          current = current.nextNode;
+        }
+        return false;
+    }
       
 }
