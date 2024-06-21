@@ -44,5 +44,16 @@ export default class LinkedList {
           current = current.nextNode;
         }
         return current;
-      }
+    }
+
+    at(index) {
+        if (index >= this.length || index < 0) {
+          return null;
+        }
+        let current = this.headNode;
+        for (let i = 0; i < index; i++) {
+          current = current.nextNode;
+        }
+        return current;
+    }
 }

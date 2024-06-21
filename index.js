@@ -22,3 +22,4 @@ function displayList(list) {
   console.log('List size:', list.size());
   console.log('Head node value:', list.head().value);
   console.log('Tail node value:', list.tail().value);
+  console.log('Node at index 1 value:', list.at(1).value);
