@@ -23,3 +23,8 @@ function displayList(list) {
   console.log('Head node value:', list.head().value);
   console.log('Tail node value:', list.tail().value);
   console.log('Node at index 1 value:', list.at(1).value);
+  
+  const poppedNode = list.pop();
+  console.log('Popped node value:', poppedNode.value);
+  console.log(displayList(list));
+  console.log('List size:', list.size()); 

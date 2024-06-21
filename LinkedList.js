@@ -56,4 +56,25 @@ export default class LinkedList {
         }
         return current;
     }
+
+    pop() {
+        if (!this.headNode) {
+          return null;
+        }
+        if (!this.headNode.nextNode) {
+          const poppedNode = this.headNode;
+          this.headNode = null;
+          this.length--;
+          return poppedNode;
+        }
+        let current = this.headNode;
+        while (current.nextNode.nextNode) {
+          current = current.nextNode;
+        }
+        const poppedNode = current.nextNode;
+        current.nextNode = null;
+        this.length--;
+        return poppedNode;
+    }
+      
 }
