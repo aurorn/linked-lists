@@ -25,9 +25,13 @@ export default class LinkedList {
         const newNode = new Node(value, this.headNode);
         this.headNode = newNode;
         this.length++;
-      }
+    }
 
-      size() {
+    size() {
         return this.length;
-      }
+    }
+
+    head() {
+        return this.headNode;
+    }
 }
