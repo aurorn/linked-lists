@@ -111,5 +111,26 @@ export default class LinkedList {
         result += 'null';
         return result;
     }
+
+    insertAt(value, index) {
+        if (index > this.length || index < 0) {
+          return null;
+        }
+        if (index === 0) {
+          this.prepend(value);
+          return;
+        }
+        if (index === this.length) {
+          this.append(value);
+          return;
+        }
+        let current = this.headNode;
+        for (let i = 0; i < index - 1; i++) {
+          current = current.nextNode;
+        }
+        const newNode = new Node(value, current.nextNode);
+        current.nextNode = newNode;
+        this.length++;
+    }
       
 }

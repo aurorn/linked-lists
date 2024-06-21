@@ -7,7 +7,7 @@ list.append(3);
 
 list.prepend(1);
 
-
+list.insertAt(2.5, 2);
 
   console.log(list.toString());
   console.log('List size:', list.size());
@@ -24,3 +24,5 @@ list.prepend(1);
   console.log('List contains 4:', list.contains(4));
   console.log('Index of value 2:', list.find(2)); 
   console.log('Index of value 4:', list.find(4)); 
+
+  
