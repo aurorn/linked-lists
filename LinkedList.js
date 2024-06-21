@@ -5,4 +5,19 @@ export default class LinkedList {
         this.headNode = null;
         this.length = 0;
     }
+
+
+    append(value) {
+        const newNode = new Node(value);
+        if (!this.headNode) {
+        this.headNode = newNode;
+        } else {
+        let current = this.headNode;
+        while (current.nextNode) {
+            current = current.nextNode;
+        }
+        current.nextNode = newNode;
+        }
+        this.length++;
+    }
 }
