@@ -21,3 +21,4 @@ function displayList(list) {
   console.log(displayList(list));
   console.log('List size:', list.size());
   console.log('Head node value:', list.head().value);
+  console.log('Tail node value:', list.tail().value);
