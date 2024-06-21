@@ -11,6 +11,10 @@ list.insertAt(2.5, 2);
 
   console.log(list.toString());
   console.log('List size:', list.size());
+  
+  const removedNode = list.removeAt(2);
+  console.log('Removed node value:', removedNode.value);
+  
   console.log('Head node value:', list.head().value);
   console.log('Tail node value:', list.tail().value);
   console.log('Node at index 1 value:', list.at(1).value);

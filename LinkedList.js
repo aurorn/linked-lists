@@ -132,5 +132,25 @@ export default class LinkedList {
         current.nextNode = newNode;
         this.length++;
     }
+
+    removeAt(index) {
+        if (index >= this.length || index < 0) {
+          return null;
+        }
+        if (index === 0) {
+          const removedNode = this.headNode;
+          this.headNode = this.headNode.nextNode;
+          this.length--;
+          return removedNode;
+        }
+        let current = this.headNode;
+        for (let i = 0; i < index - 1; i++) {
+          current = current.nextNode;
+        }
+        const removedNode = current.nextNode;
+        current.nextNode = current.nextNode.nextNode;
+        this.length--;
+        return removedNode;
+    }
       
 }
