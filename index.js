@@ -19,4 +19,4 @@ function displayList(list) {
   }
 
   console.log(displayList(list));
-  console.log('List size:', list.length);
+  console.log('List size:', list.size());
